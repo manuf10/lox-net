@@ -9,17 +9,12 @@ namespace LoxNet.Interpreter
         static void Main(string[] args)
         {
             if (args.Length > 1)
-            {
                 Console.WriteLine("Usage: loxnet [script]");
-            }
             else if (args.Length == 1)
-            {
                 RunFile(args[0]);
-            }
             else
-            {
                 RunPrompt();
-            }
+            
             if (_hadError)
                 Environment.Exit(65);
             else
